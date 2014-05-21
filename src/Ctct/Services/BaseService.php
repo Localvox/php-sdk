@@ -73,7 +73,6 @@ abstract class BaseService
         $this->restClient = $restClient;
     }
 
-
     /**
      * Helper function to return required headers for making an http request with constant contact
      * @param $accessToken - OAuth2 access token to be placed into the Authorization header
@@ -86,5 +85,21 @@ abstract class BaseService
             'Accept: application/json',
             'Authorization: Bearer ' . $accessToken
         );
+    }
+
+    /**
+     * Do request
+     *
+     * @param $baseUrl
+     * @param $params
+     * @param $accessToken
+     * @return array
+     */
+    protected function doIt($baseUrl, $params, $accessToken)
+    {
+        $url = $this->buildUrl($baseUrl, $params);
+        $response = self::getRestClient()->get($url, self::getHeaders($accessToken));
+        $result = json_decode($response->body, true);
+        return $result;
     }
 }
