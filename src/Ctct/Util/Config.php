@@ -54,8 +54,23 @@ class Config
             'contact_tracking_opens' => 'contacts/%s/tracking/opens',
             'contact_tracking_sends' => 'contacts/%s/tracking/sends',
             'contact_tracking_unsubscribes' => 'contacts/%s/tracking/unsubscribes',
-            'contact_tracking_link' => 'contacts/%s/tracking/clicks/%s'
-
+            'contact_tracking_link' => 'contacts/%s/tracking/clicks/%s',
+            'library_files' => 'library/files',
+            'library_folders' => 'library/folders',
+            'library_files_by_folder' => 'library/folders/%s/files',
+            'account_info'  => 'account/info',
+            'eventspot_events' => 'eventspot/events',
+            'eventspot_events_event' => 'eventspot/events/%s',
+            'eventspot_events_event_fees' => 'eventspot/events/%s/fees',
+            'eventspot_events_event_fee' => 'eventspot/events/%s/fees/%s',
+            'eventspot_events_event_promocodes' => 'eventspot/events/%s/promocodes',
+            'eventspot_events_event_promocode' => 'eventspot/events/%s/promocodes/%s',
+            'eventspot_events_event_registrants' => 'eventspot/events/%s/registrants',
+            'eventspot_events_event_registrant' => 'eventspot/events/%s/registrants/%s',
+            'eventspot_events_event_items' => 'eventspot/events/%s/items',
+            'eventspot_events_event_item' => 'eventspot/events/%s/items/%s',
+            'eventspot_events_event_item_attributes' => 'eventspot/events/%s/items/%s/attributes',
+            'eventspot_events_event_item_attribute' => 'eventspot/events/%s/items/%s/attributes/%s'
         ),
         /**
          * Column names used with bulk activities
