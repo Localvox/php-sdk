@@ -1,5 +1,5 @@
 {
-    "name": "constantcontact/constantcontact",
+    "name": "marketmesuite/php-sdk",
     "type": "library",
     "description": "Constant Contact PHP SDK for v2",
     "keywords": ["constantcontact", "ctct", "email marketing", "constant contact"],
@@ -14,6 +14,11 @@
             "name": "Constant Contact Web Services",
             "email": "webservices@constantcontact.com",
             "homepage": "http://developer.constantcontact.com"
+        },
+        {
+            "name": "MarketMeSuite",
+            "email": "philipp@marketmesuite.com",
+            "homepage": "http://marketmesuite.com"
         }
     ],
     "autoload": {
