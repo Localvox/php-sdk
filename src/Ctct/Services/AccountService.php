@@ -34,4 +34,23 @@ class AccountService extends BaseService
 
         return $verifiedAddresses;
     }
+
+    /**
+     * Get Summary information about the Account
+     *
+     * @param string $accessToken
+     * @param array  $params
+     * @return array|mixed
+     */
+    public function getSummaryInfo($accessToken, array $params = array())
+    {
+        $baseUrl = Config::get('endpoints.base_url')
+            . sprintf(Config::get('endpoints.account_info'));
+
+        $url = $this->buildUrl($baseUrl, $params);
+        $response = parent::getRestClient()->get($url, parent::getHeaders($accessToken));
+        $summaryInfo = json_decode($response->body, true);
+
+        return $summaryInfo;
+    }
 }
